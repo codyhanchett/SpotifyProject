@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+
+<title>Bar Chart!</title>
+</head>
+<body>
+
+    <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">Menu</button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="/code.html">Home</a>
+          <a href="/markersmap.html">Marker Map</a>
+          <a href="/Chart2.html">Bar Chart</a>
+          <a href="/index.html">3-D Globe</a>
+        </div>
+      </div>
+      <script>
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
+        }
+        
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+          if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
+        }
+        </script>
+        
+<h1 class="sansserif">BarChartBarChartBarChart</h1>
+
+<h2 class="sansserif">Bar Chart!</h2>
+<p class="sansserif">Have you ever wanted to compare the number of streams of the top songs on each continent?</p>
+<!-- Enter code for stacked bar chart of Top 3-5 songs in each country here -->
+    <div class="chart">
+    </div>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
+    <script type="text/javascript" src="Graph2.js"></script>
+
+
+</body>
+</html>
